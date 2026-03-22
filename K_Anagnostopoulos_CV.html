@@ -6,7 +6,7 @@
     <title>Konstantinos Anagnostopoulos - CV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" type="image/jpeg" href="DSC_0005.JPG">
+    <link rel="icon" type="image/jpeg" href="media/DSC_0005.JPG">
     <style>
         :root {
             --bs-primary: #505050;
@@ -17,9 +17,13 @@
           font-size: 12px;
         }
 
+        html * {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
         a {
             color: #3535ad;
-            text-underline-position: above;
+            text-decoration: none;
         }
 
     </style>
@@ -68,7 +72,7 @@
         </div>
 
         <div class="col-3 d-flex justify-content-end">
-            <img class="rounded-circle " src="DSC_0005.JPG" alt="Profile photo of Konstantinos Anagnostopoulos" width="140" height="100">
+            <img class="rounded-circle " src="media/DSC_0005.JPG" alt="Profile photo of Konstantinos Anagnostopoulos" width="140" height="100">
         </div>
       
     </header>
@@ -162,10 +166,11 @@
     <section class="mt-4">
       <h2 class="h5 border-bottom pb-2 text-primary">Software</h2>
       <div class="row justify-content-center g-3">
+        
         <div class="col-4">
           <div class="card">
             <div class="card-body">
-              <h3 class="h6 justify-content-end">Mechanical Software</h3>
+              <h3 class="h6 justify-content-end"><strong> Mechanical Software</strong></h3>
 
               <skills-template name="SolidWorks & PDM" rating="5"></skills-template>
 
@@ -175,6 +180,10 @@
 
               <skills-template name="Matlab/Simulink" rating="4"></skills-template>
 
+              <skills-template name="ROS + Gazebo" rating="4"></skills-template>
+
+              <skills-template name="Webots" rating="3"></skills-template>
+
             </div>
           </div>
         </div>
@@ -182,20 +191,20 @@
         <div class="col-4">
           <div class="card">
             <div class="card-body">
-              <h3 class="h6">Other Software</h3>
+              <h3 class="h6"><strong>Programming Software</strong></h3>
 
-              <skills-template name="Visual Studio (code)" rating="5"></skills-template>
+              <skills-template name="Visual Studio" rating="5"></skills-template>
+
+              <skills-template name="VS Code" rating="5"></skills-template>
 
               <skills-template name="Jupyter Notebook" rating="5"></skills-template>
 
-              <skills-template name="Git" rating="5"></skills-template>
+              <skills-template name="Git" rating="4"></skills-template>
 
-              <skills-template name="ROS & Gazebo" rating="4"></skills-template>
+              <skills-template name="Linux" rating="4"></skills-template>
 
-              <skills-template name="Webots" rating="3"></skills-template>
-              
-
-            
+              <skills-template name="Docker" rating="4"></skills-template>
+                          
 
             </div>
           </div>
@@ -204,7 +213,7 @@
         <div class="col-4">
           <div class="card">
             <div class="card-body">
-              <h3 class="h6">Frameworks & More</h3>
+              <h3 class="h6"><strong>Frameworks & More</strong></h3>
 
               <skills-template name="Django" rating="5"></skills-template>
 
@@ -215,7 +224,6 @@
               <skills-template name="Flutter" rating="4"></skills-template>
 
               <skills-template name="SQL" rating="4"></skills-template>
-
 
             </div>
           </div>
@@ -253,13 +261,13 @@
 
               <skills-template name="Python" rating="5"></skills-template>
 
+              <skills-template name="C/C++" rating="5"></skills-template>
+
+              <skills-template name="C#" rating="5"></skills-template>
+
+              <skills-template name="HTML/CSS/JS" rating="4"></skills-template>
+
               <skills-template name="Fortran" rating="4"></skills-template>
-
-              <skills-template name="C/C++" rating="4"></skills-template>
-
-              <skills-template name="C#" rating="4"></skills-template>
-
-              <skills-template name="HTML/CSS/JS" rating="3"></skills-template>
 
               <skills-template name="Java" rating="3"></skills-template>
 
@@ -294,15 +302,65 @@
     <!-- Certifications -->
     <section class="mt-4">
       <h2 class="h5 border-bottom pb-2 text-primary">Certifications</h2>
-      <div class="card mb-3">
-        <div class="card-body">
-          <div class="d-flex flex-column flex-md-row justify-content-between gap-1 mb-2">
-            <div class="fw-bold">Certified Professional Engineer (CPE)</div>
-            <div class="text-secondary fw-semibold">2020 - 2025</div>
+
+
+        <div class="row justify-content-start g-3">
+
+          <div class="col-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <sertifications-template name="HyperMesh 2017 Intermediate Examination" issuer="Altair University" date="April 2019" openFile="certifications/HyperMesh 2017 Intermediate Examination_Certificate of Achievement.pdf"></sertifications-template>
+                  </div>
+              </div>
           </div>
-          <p class="mb-0">Issued by the National Board of Examiners for Professional Engineers.</p>
-        </div>
+          
+          <div class="col-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <sertifications-template name="Summer School on Industrial Product Design and Concept Development" issuer="University of Aegean" date="July 2019" openFile="certifications/Anagnostopoulos_Konstantinos__8272_SHEET1.pdf"></sertifications-template>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <sertifications-template name="IBM Data Science" issuer="IBM/Coursera" date="August 2020" openFile="certifications/Coursera.pdf"></sertifications-template>
+                  </div>
+              </div>
+          </div>        
+
+          <div class="col-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <sertifications-template name="Getting Started with Accelerated Computing in Modern CUDA C++" issuer="NVIDIA" date="February 2026" openFile="certifications/My Learning _ NVIDIA.pdf"></sertifications-template>
+                  </div>
+              </div>
+          </div>  
+          
+          <div class="col-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <sertifications-template name="Machine Learning & Self-Driving Cars: Bootcamp with Python" issuer="Udemy" date="November 2022" openFile="certifications/self_driving.pdf"></sertifications-template>
+                  </div>
+              </div>
+          </div>  
+
+          <div class="col-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <sertifications-template name="Introduction to Artificial Intelligence and to Prediction & Estimation Algorithms" issuer="NKUA" date="June 2023" openFile="certifications/ekpa_ml_cert.pdf"></sertifications-template>
+                  </div>
+              </div>
+          </div>  
+
+        
+
       </div>
+
+        
+
+
     </section>
 
     <!-- Interests -->
