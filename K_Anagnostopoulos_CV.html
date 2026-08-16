@@ -13,10 +13,37 @@
 
   <script src="templates.js" defer></script>
 </head>
+<style>
+  /* Διαστάσεις και στυλ για την οθόνη */
+  .a4-page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto; /* Κεντράρισμα στην οθόνη */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); /* Εφέ σκιάς για να ξεχωρίζει σαν κόλλα χαρτί */
+    box-sizing: border-box;
+  }
 
+  /* Ρυθμίσεις για όταν εκτυπώνεται η σελίδα (ή σώζεται σε PDF) */
+  @media print {
+    body {
+      background: none !important;
+      padding: 0 !important;
+    }
+    .a4-page {
+      margin: 0 !important;
+      box-shadow: none !important;
+      width: 100% !important;
+    }
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+  }
+</style>
 
 <body class="bg-light py-2">
-  <main class="m-5">
+  <main class="a4-page p-5">
 
     <!-- Photo and Contact Information -->
     <header class="row g-3 align-items-center pb-3">
@@ -100,54 +127,185 @@
 
       <article class="card mb-3">
         <div class="card-body">
-          <div class="d-flex flex-column flex-md-row justify-content-between gap-1 mb-1">
+          <div class="d-flex flex-column flex-md-row justify-content-between gap-1 mb-1 fs-5">
             <div class="fw-bold">Mechanical & Computer Engineer - <a href="https://petropoulos.com/" target="_blank" rel="noopener noreferrer">Petros Petropoulos AEBE</a> - <a href="https://ecoshift.gr/" target="_blank" rel="noopener noreferrer">Ecoshift</a> (Athens)</div>
             <div class="text-secondary fw-semibold">Jan 2022 - now</div>
-
+            
           </div>
-          
-          <ul class="mb-2">
-            <li>Developed a centralized <strong>Web Portal/CRM for tracking vehicle lifecycles</strong>, client & partner networks (Distributors, Resellers, Service Centers), as well as managing customer complaints and service history.</li> 
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge text-muted border">Python</span>
-              <span class="badge text-muted border">Django</span>
-              <span class="badge text-muted border">PostgreSQL</span>
-              <span class="badge text-muted border">Linux Server</span>
-            </div>
-
-            <li>Firebase Google Cloud</li>
-
-
-            <li class="mt-2">Digital Twin of a tilted-rotor UAV. With model based systems engineering approaches and optimization methods... (βάλε λινκ για github, πες για sellection tool, dashboard, project management) </li>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge text-muted border">Python</span>
-              <span class="badge text-muted border">Plotly</span>
-              <span class="badge text-muted border">xFoil</span>
-              <span class="badge text-muted border">Nonlinear ODEs</span>
-              <span class="badge text-muted border">Lagrangian Mechanics</span>
-            </div>
-
-
-          </ul>
-
-          <div class="d-flex flex-wrap gap-2">
-            <span class="badge text-bg-light border">Server Web Apps</span>
-            <span class="badge text-bg-light border">IOS/Android Apps</span>
-            <span class="badge text-bg-light border">Desktop Apps</span>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge text-bg-light border">Web/Desktop/Mobile Apps</span>
             <span class="badge text-bg-light border">Mechanical Design</span>
             <span class="badge text-bg-light border">Dynamics</span>
             <span class="badge text-bg-light border">FEA</span>
           </div>
+          
+          <ul class="mb-2">
+
+            <!-- 1. CRM & After-Sales Platform -->
+            <li class="mt-3">
+              <div class="fw-bold text-dark mb-1">
+                Automotive CRM & After-Sales Management Platform
+              </div>
+              <p class="text-secondary mb-2">
+                Designed and deployed a centralized web portal to streamline vehicle lifecycles, partner communications, and post-sale support workflows.
+              </p>
+              <ul class="ps-3 text-secondary small">
+                <li><strong>Network Management:</strong> Centralized directory for client, distributor, reseller, and service center operations.</li>
+                <li><strong>Lifecycle & Ticketing:</strong> Implemented end-to-end tracking for vehicle service history, warranties, and customer complaints.</li>
+                <li><strong>DevOps & Deployment:</strong> Automated deployment pipelines to DigitalOcean cloud servers to ensure seamless continuous updates.</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-secondary border bg-light">Python</span>
+                <span class="badge text-secondary border bg-light">Django</span>
+                <span class="badge text-secondary border bg-light">PostgreSQL</span>
+                <span class="badge text-secondary border bg-light">REST API</span>
+                <span class="badge text-secondary border bg-light">DigitalOcean / CI-CD</span>
+              </div>
+            </li>
+
+            <!-- 2. Mobile App (iOS/Android) -->
+            <li class="mt-4">
+              <div class="fw-bold text-dark mb-1">
+                Smart Electric Scooter Mobile App (iOS & Android)
+              </div>
+              <p class="text-secondary mb-2">
+                Developed a cross-platform mobile application enabling keyless vehicle control and peer-to-peer sharing capabilities.
+              </p>
+              <ul class="ps-3 text-secondary small">
+                <li><strong>Wireless Unlocking:</strong> Integrated Bluetooth Low Energy (BLE) protocols for secure, low-latency vehicle unlocking.</li>
+                <li><strong>Digital Key Sharing:</strong> Built secure access-sharing workflows allowing users to grant temporary scooter access to friends.</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-secondary border bg-light">C#</span>
+                <span class="badge text-secondary border bg-light">.NET MAUI</span>
+                <span class="badge text-secondary border bg-light">BLE</span>
+                <span class="badge text-secondary border bg-light">Firebase</span>
+                <span class="badge text-secondary border bg-light">Google Cloud</span>
+              </div>
+            </li>
+
+            <!-- 3. Production Desktop Utility -->
+            <li class="mt-4">
+              <div class="fw-bold text-dark mb-1">
+                Internal Assembly Line ECU Setup Tool
+              </div>
+              <p class="text-secondary mb-2">
+                Engineered a desktop application used directly in the production facility for hardware configuration.
+              </p>
+              <ul class="ps-3 text-secondary small">
+                <li><strong>Hardware Provisioning:</strong> Automated parameter setup for Scooter Electronic Control Units (ECUs) and RF keys during assembly.</li>
+                <li><strong>Serial Communication:</strong> Established reliable serial interface protocols for real-time data exchange and configuration.</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-secondary border bg-light">C#</span>
+                <span class="badge text-secondary border bg-light">WPF</span>
+                <span class="badge text-secondary border bg-light">Serial Communication</span>
+                <span class="badge text-secondary border bg-light">Inno Setup / Installer</span>
+              </div>
+            </li>
+
+            <!-- 4. Mechanical Design & Calculations -->
+            <li class="mt-4">
+              <div class="fw-bold text-dark mb-1">
+                Electric Scooter Mechanical Design
+              </div>
+              <p class="text-secondary mb-2">
+                Structural engineering, kinematics optimization, and electrical integration for core vehicle chassis components.
+              </p>
+              <ul class="ps-3 text-secondary small">
+                <li><strong>Chassis & Dynamics:</strong> Designed and simulated suspension geometry, wheels, side-stand, and center-stand for optimal stability and durability.</li>
+                <li><strong>Electrical Systems:</strong> Authored complete electrical schematics and designed the full vehicle wiring loom (harness).</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-secondary border bg-light">SolidWorks</span>
+                <span class="badge text-secondary border bg-light">Autodesk Inventor</span>
+                <span class="badge text-secondary border bg-light">2D Drawings / GD&T</span>
+                <span class="badge text-secondary border bg-light">Kinematics</span>
+                <span class="badge text-secondary border bg-light">FEA</span>
+              </div>
+            </li>
+
+            <!-- 5. Advanced Simulation & Optimization -->
+            <li class="mt-4">
+              <div class="fw-bold text-dark mb-1">
+                Advanced Structural Dynamics & Multiphysics Optimization
+              </div>
+              <p class="text-secondary mb-2">
+                Executed numerical analysis, fatigue life evaluation, and structural optimization projects for complex mechanical systems.
+              </p>
+              <ul class="ps-3 text-secondary small">
+                <li><strong>Vibration & Fatigue:</strong> Conducted frequency domain analysis and random response simulations to assess structural durability under dynamic loads.</li>
+                <li><strong>Optimization Frameworks:</strong> Applied genetic algorithms and gradient-based methods for topology, shape, MBD and other multi-physics optimizations.</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-secondary border bg-light">Implicit / Explicit FEA</span>
+                <span class="badge text-secondary border bg-light">Topology / Shape Optimization</span>
+                <span class="badge text-secondary border bg-light">Multibody Dynamics (MBD)</span>
+                <span class="badge text-secondary border bg-light">Optimization Algorithms</span>
+              </div>
+            </li>
+
+          </ul>
+          
         </div>
       </article>
 
       <article class="card mb-3">
         <div class="card-body">
-          <div class="d-flex flex-column flex-md-row justify-content-between gap-1 mb-1">
-            <div class="fw-bold">Mechanical Engineer - <a href="https://www.linkedin.com/company/give-green-innovation-&amp;-vehicle-engineering/" target="_blank" rel="noopener noreferrer">GIVE</a> (Athens)</div>
+          <div class="d-flex flex-column flex-md-row justify-content-between gap-1 mb-1 fs-5">
+            <div class="fw-bold">Mechanical & Dynamics Engineer - <a href="https://www.linkedin.com/company/give-green-innovation-&amp;-vehicle-engineering/" target="_blank" rel="noopener noreferrer">GIVE</a> (Athens)</div>
             <div class="text-secondary fw-semibold">Sep 2018 - Dec 2021</div>
           </div>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge text-bg-light border">FEA Development</span>
+            <span class="badge text-bg-light border">Simulation</span>
+            <span class="badge text-bg-light border">Modeling</span>
+            <span class="badge text-bg-light border">Mechanical Design</span>
+            <span class="badge text-bg-light border">Dynamics</span>
+            <span class="badge text-bg-light border">FEA</span>
+          </div>
+
+
           <ul class="mb-2">
+
+            <li class="mt-3">
+              <div class="fw-bold text-dark mb-1">
+                Digital Twin & Systems Engineering for Tilted-Rotor UAV - 
+                <a href="https://github.com/your-username/your-repo" target="_blank" class="text-decoration-none fw-semibold">
+                  <i class="bi bi-github me-1"></i>Repository
+                </a>
+                - 
+                <a href="https://www.youtube.com/watch?v=your-video-id" target="_blank" class="text-decoration-none text-danger fw-semibold">
+                  <i class="bi bi-youtube me-1"></i> Demo
+                </a>
+              </div>
+              
+              <p class="text-secondary mb-2">
+                Developed a comprehensive Digital Twin framework using Model-Based Systems Engineering (MBSE) and multidisciplinary optimization methods to simulate and streamline tilted-rotor UAV design.
+              </p>
+
+              <!-- Key Features / Highlights -->
+              <ul class="ps-3 text-secondary small">
+                <li><strong>Component Selection Tool:</strong> Integrated optimization algorithms to evaluate and select optimal propulsion and aerodynamic components.</li>
+                <li><strong>Interactive Dashboard:</strong> Built dynamic web interfaces to visualize real-time simulation data, flight metrics, and performance trade-offs.</li>
+                <li><strong>Project Management:</strong> Coordinated project lifecycles, requirement tracking, and milestone delivery following MBSE standards.</li>
+              </ul>
+
+              <!-- Tech Stack Badges -->
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-secondary border bg-light">Python</span>
+                <span class="badge text-secondary border bg-light">Plotly</span>
+                <span class="badge text-secondary border bg-light">xFoil</span>
+                <span class="badge text-secondary border bg-light">Nonlinear ODEs</span>
+                <span class="badge text-secondary border bg-light">Lagrangian Mechanics</span>
+                <span class="badge text-secondary border bg-light">MBSE</span>
+              </div>
+
+
+            </li>
+
+            
+
             <li>mpataria kalman filter</li>
             <li>Leaf spring designer</li>
 
@@ -159,14 +317,10 @@
 
             <li>Static calculations and structural analysis of the mechanical systems.</li>
 
+            <li>Development of calculation tools for machine elements.</li>
+
           </ul>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="badge text-bg-light border">CAD Design</span>
-            <span class="badge text-bg-light border">Drawings</span>
-            <span class="badge text-bg-light border">Dynamics</span>
-            <span class="badge text-bg-light border">Structural</span>
-            <span class="badge text-bg-light border">Calculations</span>
-          </div>
+
         </div>
       </article>
     </section>
@@ -229,9 +383,11 @@
 
               <skills-template name="Flutter" rating="5"></skills-template>
 
-              <skills-template name="VBA" rating="4"></skills-template>
-
               <skills-template name="SQL" rating="4"></skills-template>
+
+              <skills-template name="Google Cloud" rating="4"></skills-template>
+
+              <skills-template name="VBA" rating="4"></skills-template>
 
             </div>
           </div>
@@ -449,58 +605,13 @@
 
     </section>
 
-    <!-- Git Projects -->
+    <!-- More -->
     <section class="mt-4">
-      <h2 class="h5 border-bottom pb-2 text-primary">Largest Projects</h2>
+      <h2 class="h5 border-bottom pb-2 text-primary">More</h2>
       <div class="row">
 
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="h6">Leaf Springs</h3>
-              <div class="d-flex align-items-center gap-1">
-                  <i class="bi bi-linkedin"></i>
-                  <a href="https://www.linkedin.com/in/elias-nassiopoulos" target="_blank" rel="noopener noreferrer">linkedin.com/in/elias-nassiopoulos</a>
-              </div>
-              <div class="d-flex align-items-center gap-1">
-                  <i class="bi bi-github"></i>
-                  <a href="https://github.com/elias-nassiopoulos" target="_blank" rel="noopener noreferrer">github.com/elias-nassiopoulos</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="h6">Dr. Maria Papadopoulou</h3>
-              <div class="d-flex align-items-center gap-1">
-                    <i class="bi bi-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/maria-papadopoulou" target="_blank" rel="noopener noreferrer">linkedin.com/in/maria-papadopoulou</a>
-                </div>
-                <div class="d-flex align-items-center gap-1">
-                    <i class="bi bi-github"></i>
-                    <a href="https://github.com/maria-papadopoulou" target="_blank" rel="noopener noreferrer">github.com/maria-papadopoulou</a>
-                </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="h6">Dr. Maria Papadopoulou</h3>
-              <div class="d-flex align-items-center gap-1">
-                    <i class="bi bi-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/maria-papadopoulou" target="_blank" rel="noopener noreferrer">linkedin.com/in/maria-papadopoulou</a>
-                </div>
-                <div class="d-flex align-items-center gap-1">
-                    <i class="bi bi-github"></i>
-                    <a href="https://github.com/maria-papadopoulou" target="_blank" rel="noopener noreferrer">github.com/maria-papadopoulou</a>
-                </div>
-            </div>
-          </div>
-        </div>
+        Check more for me in my personal page. Take a look in my interests and hobbies, and my personal projects.
+      </div>
 
     </section>
 
