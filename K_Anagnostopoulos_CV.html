@@ -39,6 +39,21 @@
       size: A4 portrait;
       margin: 0;
     }
+
+  * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .text-secondary,
+    .text-muted {
+      color: #6c757d !important;
+    }
+
+    .bg-light {
+      background-color: #f8f9fa !important;
+    }
+
   }
 </style>
 
@@ -75,7 +90,7 @@
 
                 <div class="d-flex align-items-center gap-1">
                     <i class="bi bi-telephone-fill"></i>
-                    <span class="text-primary">+30 6984973907</span>
+                    <a href="tel:+306984973907">+30 6984973907</a>
                 </div>
             
             </div>
@@ -128,7 +143,7 @@
       <article class="card mb-3">
         <div class="card-body">
           <div class="d-flex flex-column flex-md-row justify-content-between gap-1 mb-1 fs-5">
-            <div class="fw-bold">Mechanical & Computer Engineer - <a href="https://petropoulos.com/" target="_blank" rel="noopener noreferrer">Petros Petropoulos AEBE</a> - <a href="https://ecoshift.gr/" target="_blank" rel="noopener noreferrer">Ecoshift</a> (Athens)</div>
+            <div class="fw-bold">Mechanical & Software Engineer - <a href="https://petropoulos.com/" target="_blank" rel="noopener noreferrer">Petros Petropoulos AEBE</a> - <a href="https://ecoshift.gr/" target="_blank" rel="noopener noreferrer">Ecoshift</a> (Athens)</div>
             <div class="text-secondary fw-semibold">Jan 2022 - now</div>
             
           </div>
@@ -253,7 +268,7 @@
       <article class="card mb-3">
         <div class="card-body">
           <div class="d-flex flex-column flex-md-row justify-content-between gap-1 mb-1 fs-5">
-            <div class="fw-bold">Mechanical & Dynamics Engineer - <a href="https://www.linkedin.com/company/give-green-innovation-&amp;-vehicle-engineering/" target="_blank" rel="noopener noreferrer">GIVE</a> (Athens)</div>
+            <div class="fw-bold">Dynamics Engineer - <a href="https://www.linkedin.com/company/give-green-innovation-&amp;-vehicle-engineering/" target="_blank" rel="noopener noreferrer">GIVE</a> (Athens)</div>
             <div class="text-secondary fw-semibold">Sep 2018 - Dec 2021</div>
           </div>
           <div class="d-flex flex-wrap gap-2 mb-3">
@@ -275,7 +290,7 @@
                   <i class="bi bi-github me-1"></i>Repository
                 </a>
                 - 
-                <a href="https://www.youtube.com/watch?v=your-video-id" target="_blank" class="text-decoration-none text-danger fw-semibold">
+                <a href="https://www.youtube.com/watch?v=ICB6OieUZWc" target="_blank" class="text-decoration-none text-danger fw-semibold">
                   <i class="bi bi-youtube me-1"></i> Demo
                 </a>
               </div>
@@ -304,9 +319,35 @@
 
             </li>
 
+            <li class="mt-3">
+              <div class="fw-bold text-dark mb-1">
+                Electrical model of battery cell with Kalman filter for SOC estimation
+              </div>
+              
+              <p class="text-secondary mb-2">
+                Curve fit, Kalman filter implementation and SOC estimation of a Li-ion battery cell using Python and MATLAB. Scaled up to battery pack level. 
+              </p>
+
+              <!-- Key Features / Highlights -->
+              <ul class="ps-3 text-secondary small">
+                <li><strong>Battery modeling:</strong> Developed an equivalent circuit model (2nd order) of a Li-ion battery cell to capture its dynamic behavior.</li>
+                <li><strong>Curve fitting:</strong> Performed curve fitting to model the battery's voltage characteristics under various operating conditions based on experimental data.</li>
+                <li><strong>Kalman filter implementation:</strong> Implemented a Kalman filter for state-of-charge (SOC) estimation, improving the accuracy of the battery model.</li>
+
+              </ul>
+
+              <!-- Tech Stack Badges -->
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-secondary border bg-light">Genetic Algorithms</span>
+                <span class="badge text-secondary border bg-light">Nonlinear 2nd order ODEs</span>
+                <span class="badge text-secondary border bg-light">Kalman Filter</span>
+                <span class="badge text-secondary border bg-light">MATLAB/Simulink</span>
+              </div>
+
+
+            </li>
             
 
-            <li>mpataria kalman filter</li>
             <li>Leaf spring designer</li>
 
             <li>Thermal analysis of mechanical systems. and developement of 1D code</li>
