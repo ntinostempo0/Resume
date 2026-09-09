@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="icon" type="image/jpeg" href="media/DSC_0005.JPG">
+    <link rel="icon" type="image/png" href="media/favicon.png">
 
 </head>
 
@@ -25,109 +25,214 @@
         <div class="page d-flex align-items-center justify-content-center" style="min-height: 80vh;">
             <div class="text-center">
                 <h1 class="text-white mb-4">Welcome</h1>
-                <h5 class="text-white mb-4">
+                <h5 class="text-white mb-4" style="max-width: 600px; margin: 0 auto;">
                     I am Konstantinos Anagnostopoulos, a mechanical and computer engineer, passionate about technology
-                    and science. Explore my projects and CV to learn more about my skills and experiences.
+                    and science. Explore my projects in GitHub and CV to learn more about my skills and experiences.
                 </h5>
                 <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                    <a href="projects.html" class="btn btn-light btn-lg fw-semibold px-4">Projects</a>
+                    <a href="https://github.com/ntinostempo0" target="_blank" class="btn btn-light btn-lg fw-semibold px-4">Projects</a>
                     <a href="K_Anagnostopoulos_CV.html" class="btn btn-light btn-lg fw-semibold px-4">Resume</a>
                 </div>
 
-                <p class="text-white mt-5">Or scroll down to explore my interests. View my photographs, listen to my music
-                    and more...</p>
+                <p class="text-white mt-5">Or scroll down to explore my interests, view my photographs and listen to my music</p>
                 <div class="pointer">👇</div>
 
             </div>
         </div>
 
 
-        <!-- Section to bring on top when scrolling down -->
-        <div class="page" style="position: relative;">
+        <!-- Information Section -->
+        <div class="page information-page" style="position: relative;">
             
             <div class="page-with-bg"></div>
 
-            <div class="page-content">
+            <div class="page-content information-content">
                 <h2 class="text-white mb-4">About Me</h2>
-                <p class="text-white"> 
-                    I was born in Aigio (Greece), a small town near Patras. In the early years of my life, I realized my passion for athletics, first football and gymnastics and then basketball. 
+                <p class="text-white">
+                    I was born in Aigio, Greece, a small town near Patras. From an early age, I discovered my passion for athletics, beginning with football and gymnastics before moving on to basketball and tennis.
+                </p>
+                <p class="text-white">
+                    Music has always been an important part of my life. I play the piano and clarinet, and I hold degrees in Piano and Music Theory from the National Conservatory of Patras. I have performed with several rock, classical and philharmonic groups, although I especially enjoy composing my own music. My love of cinema also inspired my dream of composing music for films.
+                </p>
+                <p class="text-white">
+                    I enjoy travelling and discovering new places, cultures and cuisines. I also like reading, particularly classical literature and science books.
+                </p>
+                <p class="text-white">
+                    More recently, I have become interested in photography and videography. I mostly photograph nature, landscapes and animals, while astrophotography remains my ongoing work in progress. In the sections below, you can view some of my photographs and listen to my music.
                 </p>
             </div>
         </div>
 
-        <!-- Check my music with my photos (video or play in loop audio) -->
+        
+        <!-- My Photos Section -->
+        <div class="page photos-page" style="position: relative;">
+            <h3 class="text-white">My Photos</h3>
+            <div id="photoGallery" class="photo-gallery" aria-label="Photo gallery"></div>
 
+            <div id="photoViewer" class="photo-viewer" hidden>
+                <button id="closeViewer" class="viewer-close" type="button" aria-label="Close image viewer">&times;</button>
+                <button id="previousPhoto" class="viewer-nav viewer-previous" type="button" aria-label="Previous image">&#10094;</button>
+                <img id="viewerImage" src="" alt="Selected photograph">
+                <button id="nextPhoto" class="viewer-nav viewer-next" type="button" aria-label="Next image">&#10095;</button>
+                <p id="viewerCaption" class="viewer-caption"></p>
+            </div>
+        </div>
 
-        <!-- Section to bring on top when scrolling down -->
-        <div class="page" style="position: relative;">
-            <h3>Check other Music</h3>
+        <!-- My Music Section -->
+        <div class="page music-page" style="position: relative;">
+            <h3 class="text-white">Track 1</h3>
+            <!-- Content -->
+            <div class="player mb-5">
+                <!-- Hidden audio -->
+                <audio src="media/audio/1.wav"></audio>
+
+                <div class="controls">
+                    <button class="play-btn" type="button">▶</button>
+
+                    <div class="progress">
+                    <input type="range" class="progress-bar" value="0" min="0" max="100">
+                    </div>
+
+                    <div class="time text-white">0:00</div>
+                </div>
+            </div>
+
+            <h3 class="text-white">Track 2</h3>
+            <!-- Content -->
+            <div class="player mb-5">
+                <!-- Hidden audio -->
+                <audio src="media/audio/2.wav"></audio>
+
+                <div class="controls">
+                    <button class="play-btn" type="button">▶</button>
+
+                    <div class="progress">
+                    <input type="range" class="progress-bar" value="0" min="0" max="100">
+                    </div>
+
+                    <div class="time text-white">0:00</div>
+                </div>
+            </div>
+
+            <h3 class="text-white">Track 3</h3>
             <!-- Content -->
             <div class="player">
                 <!-- Hidden audio -->
-                <audio id="audio" src="media/audio/1.wav"></audio>
+                <audio src="media/audio/3.wav"></audio>
 
                 <div class="controls">
-                    <button class="play-btn" id="playBtn">▶</button>
+                    <button class="play-btn" type="button">▶</button>
 
                     <div class="progress">
-                    <input type="range" id="progressBar" value="0" min="0" max="100">
+                    <input type="range" class="progress-bar" value="0" min="0" max="100">
                     </div>
 
-                    <div class="time" id="time">0:00</div>
+                    <div class="time text-white">0:00</div>
                 </div>
             </div>
 
         </div>
 
 
-        <!-- Books -->
-
-        <!-- Travel, Food, Animals -->
-
 
     </div>
 
 
-<script>
-  const audio = document.getElementById("audio");
-  const playBtn = document.getElementById("playBtn");
-  const progressBar = document.getElementById("progressBar");
-  const timeDisplay = document.getElementById("time");
-
-  // Play / Pause
-  playBtn.addEventListener("click", () => {
-    if (audio.paused) {
-      audio.play();
-      playBtn.textContent = "⏸";
-    } else {
-      audio.pause();
-      playBtn.textContent = "▶";
-    }
-  });
-
-  // Update progress bar
-  audio.addEventListener("timeupdate", () => {
-    const progress = (audio.currentTime / audio.duration) * 100;
-    progressBar.value = progress || 0;
-
-    // Update time
-    const minutes = Math.floor(audio.currentTime / 60);
-    const seconds = Math.floor(audio.currentTime % 60)
-      .toString()
-      .padStart(2, '0');
-
-    timeDisplay.textContent = `${minutes}:${seconds}`;
-  });
-
-  // Seek when user moves slider
-  progressBar.addEventListener("input", () => {
-    const time = (progressBar.value / 100) * audio.duration;
-    audio.currentTime = time;
-  });
-</script>
-
 </body>
 
 </html>
+
+<script>
+    const photoGallery = document.getElementById("photoGallery");
+    const photoViewer = document.getElementById("photoViewer");
+    const viewerImage = document.getElementById("viewerImage");
+    const viewerCaption = document.getElementById("viewerCaption");
+    const imageCount = 4;
+    let selectedPhoto = 0;
+
+    for (let imageNumber = 1; imageNumber <= imageCount; imageNumber += 1) {
+        const imageName = `im${String(imageNumber).padStart(2, "0")}.jpg`;
+        const image = document.createElement("img");
+        image.src = `media/images/${imageName}`;
+        image.alt = `Photo ${imageNumber}`;
+        image.className = "photo-thumbnail";
+        image.dataset.photoIndex = imageNumber - 1;
+        image.addEventListener("click", () => openPhotoViewer(Number(image.dataset.photoIndex)));
+        photoGallery.appendChild(image);
+    }
+
+    function openPhotoViewer(photoIndex) {
+        selectedPhoto = photoIndex;
+        updatePhotoViewer();
+        photoViewer.hidden = false;
+    }
+
+    function updatePhotoViewer() {
+        const imageNumber = selectedPhoto + 1;
+        const imageName = `im${String(imageNumber).padStart(2, "0")}.jpg`;
+        viewerImage.src = `media/images/${imageName}`;
+        viewerImage.alt = `Photo ${imageNumber}`;
+        viewerCaption.textContent = `${imageNumber} / ${imageCount}`;
+    }
+
+    document.getElementById("closeViewer").addEventListener("click", () => {
+        photoViewer.hidden = true;
+    });
+
+    document.getElementById("previousPhoto").addEventListener("click", () => {
+        selectedPhoto = (selectedPhoto - 1 + imageCount) % imageCount;
+        updatePhotoViewer();
+    });
+
+    document.getElementById("nextPhoto").addEventListener("click", () => {
+        selectedPhoto = (selectedPhoto + 1) % imageCount;
+        updatePhotoViewer();
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (photoViewer.hidden) return;
+        if (event.key === "Escape") photoViewer.hidden = true;
+        if (event.key === "ArrowLeft") document.getElementById("previousPhoto").click();
+        if (event.key === "ArrowRight") document.getElementById("nextPhoto").click();
+    });
+
+    document.querySelectorAll(".player").forEach((player) => {
+        const audio = player.querySelector("audio");
+        const playBtn = player.querySelector(".play-btn");
+        const progressBar = player.querySelector(".progress-bar");
+        const timeDisplay = player.querySelector(".time");
+
+        playBtn.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play();
+                playBtn.textContent = "⏸";
+            } else {
+                audio.pause();
+                playBtn.textContent = "▶";
+            }
+        });
+
+        audio.addEventListener("timeupdate", () => {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBar.value = progress || 0;
+
+            const minutes = Math.floor(audio.currentTime / 60);
+            const seconds = Math.floor(audio.currentTime % 60)
+                .toString()
+                .padStart(2, "0");
+
+            timeDisplay.textContent = `${minutes}:${seconds}`;
+        });
+
+        audio.addEventListener("ended", () => {
+            playBtn.textContent = "▶";
+            progressBar.value = 0;
+        });
+
+        progressBar.addEventListener("input", () => {
+            audio.currentTime = (progressBar.value / 100) * audio.duration;
+        });
+    });
+</script>
 
 
