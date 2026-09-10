@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Konstantinos Anagnostopoulos - CV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -11,34 +11,20 @@
     <!-- Custom styles for the CV -->
     <link rel="stylesheet" href="styles.css">
 
-    <script src="templates.js" defer></script>
+  <script src="templates.js" defer></script>
 </head>
 <style>
-  html, body {
-    overflow-x: hidden; /* Prevents unwanted horizontal scroll on small screens */
-  }
-
-  /* Standard A4 dimensions for desktop view */
+  /* Διαστάσεις και στυλ για την οθόνη */
   .a4-page {
     width: 210mm;
     min-height: 297mm;
-    margin: 0 auto; /* Centering on screen */
+    margin: 0 auto; /* Κεντράρισμα στην οθόνη */
     background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); /* Εφέ σκιάς για να ξεχωρίζει σαν κόλλα χαρτί */
     box-sizing: border-box;
   }
 
-  /* Responsive layout for Mobile screens */
-  @media (max-width: 210mm) {
-    .a4-page {
-      width: 100% !important;
-      max-width: 100% !important;
-      padding: 1.5rem !important; /* Adjust padding for mobile readability */
-      box-shadow: none;
-    }
-  }
-
-  /* Print Styles */
+  /* Ρυθμίσεις για όταν εκτυπώνεται η σελίδα (ή σώζεται σε PDF) */
   @media print {
     body {
       background: none !important;
@@ -54,7 +40,7 @@
       margin: 0;
     }
 
-    * {
+  * {
       -webkit-print-color-adjust: exact !important;
       print-color-adjust: exact !important;
     }
@@ -67,6 +53,7 @@
     .bg-light {
       background-color: #f8f9fa !important;
     }
+
   }
 </style>
 
@@ -75,41 +62,52 @@
 
     <!-- Photo and Contact Information -->
     <header class="row g-3 align-items-center pb-3">
+        
         <div class="col-9">
             <h1 class="h2 mb-1 text-primary">Konstantinos Anagnostopoulos</h1>
             <p class="lead fs-6 mb-2 text-secondary fw-semibold">Mechanical &amp; Computer Engineer</p>
             <div class="d-flex flex-wrap gap-2 small">
+
                 <div class="d-flex align-items-center gap-1">
                     <i class="bi bi-linkedin"></i>
                     <a href="https://www.linkedin.com/in/konstantinos-anagn" target="_blank" rel="noopener noreferrer">linkedin.com/in/konstantinos-anagn</a>
                 </div>
+
                 <div class="d-flex align-items-center gap-1">
                     <i class="bi bi-github"></i>
                     <a href="https://github.com/ntinostempo0" target="_blank" rel="noopener noreferrer">github.com/ntinostempo0</a>
                 </div>
+
                 <div class="d-flex align-items-center gap-1">
                     <i class="bi bi-envelope-fill"></i>
                     <a href="mailto:ntinostempo@gmail.com">ntinostempo@gmail.com</a>
                 </div>  
+
                 <div class="d-flex align-items-center gap-1">
                     <i class="bi bi-house-door-fill"></i>
                     <a href="https://maps.app.goo.gl/Sg2WbYwG7EybN67D9">Vrioulon 16 Kesariani, Athens, Greece</a>
                 </div>  
+
                 <div class="d-flex align-items-center gap-1">
                     <i class="bi bi-telephone-fill"></i>
                     <a href="tel:+306984973907">+30 6984973907</a>
                 </div>
+            
             </div>
         </div>
 
         <div class="col-3 d-flex justify-content-end">
-            <img class="rounded-circle" src="media/DSC_0005.JPG" alt="Profile photo of Konstantinos Anagnostopoulos" width="140" height="100">
+            <img class="rounded-circle " src="media/DSC_0005.JPG" alt="Profile photo of Konstantinos Anagnostopoulos" width="140" height="100">
         </div>
+      
     </header>
 
     <!-- Summary -->
     <p class="mb-0 text-muted text-inline" style="text-align: justify;">Mechanical and computer engineer with a passion for innovative solutions. <strong>Over 8 years of experience</strong> in automotive engineering, specializing in the design and development of passenger and cargo vehicles. Proficient in <strong>dynamics</strong> and <strong>software development</strong>, with a strong background in structural analysis, CAD, control systems, optimization, mobile, desktop and web app development.</p>
     <p class="mb-0 text-muted" style="text-align: justify;">Adept at leading cross-functional teams and managing complex projects from concept to completion. Committed to continuous learning and staying abreast of industry advancements to drive excellence in engineering design and performance.</p>
+
+    <!-- Empty Space -->
+    <!-- <p style="margin-bottom: 100px;">&nbsp;</p> -->
 
     <!-- Knowledge -->
     <section class="mt-4">
@@ -148,6 +146,7 @@
           <div class="d-flex flex-column flex-md-row justify-content-between gap-1 mb-1 fs-5">
             <div class="fw-bold">Mechanical & Software Engineer - <a href="https://petropoulos.com/" target="_blank" rel="noopener noreferrer">Petros Petropoulos AEBE</a> - <a href="https://ecoshift.gr/" target="_blank" rel="noopener noreferrer">Ecoshift</a> (Athens)</div>
             <div class="text-secondary fw-semibold">Jan 2022 - now</div>
+            
           </div>
           <div class="d-flex flex-wrap gap-2 mb-3">
             <span class="badge text-bg-light border">Web/Desktop/Mobile Apps</span>
@@ -157,9 +156,14 @@
           </div>
           
           <ul class="mb-2">
+
             <li class="mt-3">
-              <div class="fw-bold text-dark mb-1">Automotive CRM & After-Sales Management Platform</div>
-              <p class="text-secondary mb-2">Designed and deployed a centralized web portal to streamline vehicle lifecycles, partner communications, and post-sale support workflows.</p>
+              <div class="fw-bold text-dark mb-1">
+                Automotive CRM & After-Sales Management Platform
+              </div>
+              <p class="text-secondary mb-2">
+                Designed and deployed a centralized web portal to streamline vehicle lifecycles, partner communications, and post-sale support workflows.
+              </p>
               <ul class="ps-3 text-secondary small">
                 <li><strong>Network Management:</strong> Centralized directory for client, distributor, reseller, and service center operations.</li>
                 <li><strong>Lifecycle & Ticketing:</strong> Implemented end-to-end tracking for vehicle service history, warranties, and customer complaints.</li>
@@ -176,8 +180,12 @@
             </li>
 
             <li class="mt-4">
-              <div class="fw-bold text-dark mb-1">Smart Electric Scooter Mobile App (iOS & Android)</div>
-              <p class="text-secondary mb-2">Developed a cross-platform mobile application enabling keyless vehicle control and peer-to-peer sharing capabilities.</p>
+              <div class="fw-bold text-dark mb-1">
+                Smart Electric Scooter Mobile App (iOS & Android)
+              </div>
+              <p class="text-secondary mb-2">
+                Developed a cross-platform mobile application enabling keyless vehicle control and peer-to-peer sharing capabilities.
+              </p>
               <ul class="ps-3 text-secondary small">
                 <li><strong>Wireless Unlocking:</strong> Integrated Bluetooth Low Energy (BLE) protocols for secure, low-latency vehicle unlocking.</li>
                 <li><strong>Digital Key Sharing:</strong> Built secure access-sharing workflows allowing users to grant temporary scooter access to friends.</li>
@@ -192,8 +200,12 @@
             </li>
 
             <li class="mt-4">
-              <div class="fw-bold text-dark mb-1">Internal Assembly Line ECU Setup Tool</div>
-              <p class="text-secondary mb-2">Engineered a desktop application used directly in the production facility for hardware configuration.</p>
+              <div class="fw-bold text-dark mb-1">
+                Internal Assembly Line ECU Setup Tool
+              </div>
+              <p class="text-secondary mb-2">
+                Engineered a desktop application used directly in the production facility for hardware configuration.
+              </p>
               <ul class="ps-3 text-secondary small">
                 <li><strong>Hardware Provisioning:</strong> Automated parameter setup for Scooter Electronic Control Units (ECUs) and RF keys during assembly.</li>
                 <li><strong>Serial Communication:</strong> Established reliable serial interface protocols for real-time data exchange and configuration.</li>
@@ -207,8 +219,12 @@
             </li>
 
             <li class="mt-4">
-              <div class="fw-bold text-dark mb-1">Electric Scooter Mechanical Design</div>
-              <p class="text-secondary mb-2">CAD Design, structural engineering, kinematics optimization, and electrical integration for core vehicle chassis components.</p>
+              <div class="fw-bold text-dark mb-1">
+                Electric Scooter Mechanical Design
+              </div>
+              <p class="text-secondary mb-2">
+                CAD Design, structural engineering, kinematics optimization, and electrical integration for core vehicle chassis components.
+              </p>
               <ul class="ps-3 text-secondary small">
                 <li><strong>Structural & Dynamics:</strong> Designed and simulated suspension geometry, wheels, side-stand, and center-stand for optimal stability and durability.</li>
                 <li><strong>Electrical Systems:</strong> Authored complete electrical schematics and designed the full vehicle wiring loom (harness).</li>
@@ -223,8 +239,12 @@
             </li>
 
             <li class="mt-4">
-              <div class="fw-bold text-dark mb-1">Advanced Structural Dynamics & Multiphysics Optimization</div>
-              <p class="text-secondary mb-2">Executed numerical analysis, fatigue life evaluation, and structural optimization projects for complex mechanical systems.</p>
+              <div class="fw-bold text-dark mb-1">
+                Advanced Structural Dynamics & Multiphysics Optimization
+              </div>
+              <p class="text-secondary mb-2">
+                Executed numerical analysis, fatigue life evaluation, and structural optimization projects for complex mechanical systems.
+              </p>
               <ul class="ps-3 text-secondary small">
                 <li><strong>Vibration & Fatigue:</strong> Conducted frequency domain analysis and random response simulations to assess structural durability under dynamic loads. Topology optimization under modal analysis for increased frequency of the first mode.</li>
                 <li><strong>Optimization Frameworks:</strong> Applied genetic algorithms and gradient-based methods for topology, shape, MBD and other multi-physics optimizations.</li>
@@ -237,7 +257,9 @@
                 <span class="badge text-secondary border bg-light">Modal</span>
               </div>
             </li>
+
           </ul>
+          
         </div>
       </article>
 
@@ -257,7 +279,9 @@
             <span class="badge text-bg-light border">FEA</span>
           </div>
 
+
           <ul class="mb-2">
+
             <li class="mt-3">
               <div class="fw-bold text-dark mb-1">
                 Digital Twin & Systems Engineering for Tilted-Rotor UAV - 
@@ -265,12 +289,19 @@
                   <i class="bi bi-youtube me-1"></i> Demo
                 </a>
               </div>
-              <p class="text-secondary mb-2">Developed a comprehensive Digital Twin framework using Model-Based Systems Engineering (MBSE) and multidisciplinary optimization methods to simulate and streamline tilted-rotor UAV design.</p>
+              
+              <p class="text-secondary mb-2">
+                Developed a comprehensive Digital Twin framework using Model-Based Systems Engineering (MBSE) and multidisciplinary optimization methods to simulate and streamline tilted-rotor UAV design.
+              </p>
+
+              <!-- Key Features / Highlights -->
               <ul class="ps-3 text-secondary small">
                 <li><strong>Component Selection Tool:</strong> Integrated optimization algorithms to evaluate and select optimal propulsion and aerodynamic components.</li>
                 <li><strong>Interactive Dashboard:</strong> Built dynamic web interfaces to visualize real-time simulation data, flight metrics, and performance trade-offs.</li>
                 <li><strong>Project Management:</strong> Coordinated project lifecycles, requirement tracking, and milestone delivery following MBSE standards.</li>
               </ul>
+
+              <!-- Tech Stack Badges -->
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <span class="badge text-secondary border bg-light">Python</span>
                 <span class="badge text-secondary border bg-light">Plotly Dashboard</span>
@@ -279,31 +310,59 @@
                 <span class="badge text-secondary border bg-light">Lagrangian Mechanics</span>
                 <span class="badge text-secondary border bg-light">MBSE</span>
               </div>
+
+
             </li>
 
             <li class="mt-3">
-              <div class="fw-bold text-dark mb-1">Electrical model of battery cell with Kalman filter for SOC estimation</div>
-              <p class="text-secondary mb-2">Curve fit, Kalman filter implementation and SOC estimation of a Li-ion battery cell using Python and MATLAB. Scaled up to battery pack level.</p>
+              <div class="fw-bold text-dark mb-1">
+                Electrical model of battery cell with Kalman filter for SOC estimation
+              </div>
+              
+              <p class="text-secondary mb-2">
+                Curve fit, Kalman filter implementation and SOC estimation of a Li-ion battery cell using Python and MATLAB. Scaled up to battery pack level. 
+              </p>
+
+              <!-- Key Features / Highlights -->
               <ul class="ps-3 text-secondary small">
                 <li><strong>Battery modeling:</strong> Developed an equivalent circuit model (2nd order) of a Li-ion battery cell to capture its dynamic behavior.</li>
                 <li><strong>Curve fitting:</strong> Performed curve fitting to model the battery's voltage characteristics under various operating conditions based on experimental data.</li>
                 <li><strong>Kalman filter implementation:</strong> Implemented a Kalman filter for state-of-charge (SOC) estimation, improving the accuracy of the battery model.</li>
+
               </ul>
+
+              <!-- Tech Stack Badges -->
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <span class="badge text-secondary border bg-light">Genetic Algorithms</span>
                 <span class="badge text-secondary border bg-light">Nonlinear 2nd order ODEs</span>
                 <span class="badge text-secondary border bg-light">Kalman Filter</span>
                 <span class="badge text-secondary border bg-light">MATLAB/Simulink</span>
               </div>
+
+
             </li>
+            
 
             <li class="mt-3">
-              <div class="fw-bold text-dark mb-1">Leaf Spring Designer desktop app</div>
-              <p class="text-secondary mb-2">A PyQt desktop application for the design and analysis of heavy vehicle leaf springs. The app provides a user-friendly interface for inputting design parameters, performing calculations, and visualizing results. Results can be corrected by using a neural network trained on real test data.</p>
+              <div class="fw-bold text-dark mb-1">
+                Leaf Spring Designer desktop app - 
+                <!-- <a href="https://github.com/your-username/your-repo" target="_blank" class="text-decoration-none fw-semibold">
+                  <i class="bi bi-github me-1"></i>Repository
+                </a> -->
+
+              </div>
+              
+              <p class="text-secondary mb-2">
+                A PyQt desktop application for the design and analysis of heavy vehicle leaf springs. The app provides a user-friendly interface for inputting design parameters, performing calculations, and visualizing results. Results can be corrected by using a neural network trained on real test data.
+              </p>
+
+              <!-- Key Features / Highlights -->
               <ul class="ps-3 text-secondary small">
                 <li><strong>Finite Elements:</strong> Implemented 2D beam, spring, gap and rod elements for accurate structural analysis.</li>
                 <li><strong>Neural Network Integration:</strong> A neural network implemented from scratch to correct simulation results based on real-world test data.</li>
               </ul>
+
+              <!-- Tech Stack Badges -->
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <span class="badge text-secondary border bg-light">PyQt</span>
                 <span class="badge text-secondary border bg-light">Non-Linear FEA</span>
@@ -312,6 +371,8 @@
                 <span class="badge text-secondary border bg-light">Classification</span>
                 <span class="badge text-secondary border bg-light">Neural Networks</span>
               </div>
+
+
             </li>
 
             <li class="mt-3">
@@ -320,23 +381,38 @@
                 <a href="https://github.com/ntinostempo0/Thermal1D" target="_blank" class="text-decoration-none fw-semibold">
                   <i class="bi bi-github me-1"></i>Repository
                 </a>
+
               </div>
-              <p class="text-secondary mb-2">A Python script for the thermal analysis of mechanical systems. The script implements a 1D finite element method to solve the heat conduction and convection equations and provides temperature distribution results for various boundary conditions.</p>
+              
+              <p class="text-secondary mb-2">
+                A Python script for the thermal analysis of mechanical systems. The script implements a 1D finite element method to solve the heat conduction and convection equations and provides temperature distribution results for various boundary conditions.
+              </p>
+
+              <!-- Key Features / Highlights -->
               <ul class="ps-3 text-secondary small">
-                <li><strong>Implementation:</strong> 1D FEM formulation for thermal transport equations.</li>
+                <li><strong>Implementation:</strong> .</li>
                 <li><strong>Testing:</strong> Tested with commercial 3D finite element software.</li>
               </ul>
+
+              <!-- Tech Stack Badges -->
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <span class="badge text-secondary border bg-light">Python</span>
                 <span class="badge text-secondary border bg-light">Heat Equation</span>
                 <span class="badge text-secondary border bg-light">Implicit/Explicit</span>
                 <span class="badge text-secondary border bg-light">Crank-Nicolson</span>
               </div>
+              
+
+
             </li>
 
             <li class="mt-4">
-              <div class="fw-bold text-dark mb-1">Electric Scooter Mechanical Design</div>
-              <p class="text-secondary mb-2">CAD Design of various mechanical components, structural engineering and suspension optimization for rider's comfort and traction. Multibody dynamics analysis of the vehicle in several road conditions and inputs.</p>
+              <div class="fw-bold text-dark mb-1">
+                Electric Scooter Mechanical Design
+              </div>
+              <p class="text-secondary mb-2">
+                CAD Design of various mechanical components, structural engineering and suspension optimization for rider's comfort and traction. Multibody dynamics analysis of the vehicle in several road conditions and inputs. 
+              </p>
               <ul class="ps-3 text-secondary small">
                 <li><strong>Dynamics:</strong> Designed and simulated suspension geometry, wheels, side-stand, and center-stand for optimal stability and durability.</li>
                 <li><strong>Structural:</strong> Authored complete electrical schematics and designed the full vehicle wiring loom (harness).</li>
@@ -351,8 +427,12 @@
             </li>
 
             <li class="mt-4">
-              <div class="fw-bold text-dark mb-1">Several projects on vehicle dynamics and structural analysis of mechanical systems.</div>
-              <p class="text-secondary mb-2">Conducted in-depth dynamics and kinematics analysis, static calculations, and structural analysis of various mechanical systems.</p>
+              <div class="fw-bold text-dark mb-1">
+                Several projects on vehicle dynamics and structural analysis of mechanical systems.
+              </div>
+              <p class="text-secondary mb-2">
+                Conducted in-depth dynamics and kinematics analysis, static calculations, and structural analysis of various mechanical systems. 
+              </p>
               <ul class="ps-3 text-secondary small">
                 <li><strong>Dynamics:</strong> Simulation of durability tests. Suspension optimization for heavy load vehicles. Flexible body analysis in hydraulic cargo boxes for fatigue analysis. Dynamics of innovative wheelchair with active control angle adjustment in passenger's seat.</li>
                 <li><strong>Structural:</strong> Simulation of small wind turbine components for structural integrity and conduction of report for certification authority. Topology optimization in frequency response analysis for engine subframes.</li>
@@ -367,7 +447,9 @@
                 <span class="badge text-secondary border bg-light">Excel/VBA</span>
               </div>
             </li>
+
           </ul>
+
         </div>
       </article>
 
@@ -383,18 +465,27 @@
             <span class="badge text-bg-light border">Web Development</span>
           </div>
 
+
           <ul class="mb-2">
+
             <li class="mt-3">
               <div class="fw-bold text-dark mb-1">
-                Automatic save of car location for Android - 
+                Automatic save of car location for Android -  
                 <a href="https://play.google.com/store/apps/details?id=com.blueprogramming.carlocator" target="_blank" class="text-decoration-none fw-semibold">
                   <i class="bi bi-google-play me-1"></i> Play Store
                 </a>
               </div>
-              <p class="text-secondary mb-2">Developed in Flutter only for Android, this app automatically saves the car's location.</p>
+              
+              <p class="text-secondary mb-2">
+                Developed in Flutter only for Android, this app automatically saves the car's location.
+              </p>
+
+              <!-- Key Features / Highlights -->
               <ul class="ps-3 text-secondary small">
                 <li><strong>How it works:</strong> The app works in background and automatically saves the car's location when the Bluetooth connection is lost. A background service is used to monitor the connection and save the location.</li>
               </ul>
+
+              <!-- Tech Stack Badges -->
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <span class="badge text-secondary border bg-light">Flutter</span>
                 <span class="badge text-secondary border bg-light">Android Application</span>
@@ -402,7 +493,10 @@
                 <span class="badge text-secondary border bg-light">Location Services</span>
                 <span class="badge text-secondary border bg-light">Background Service</span>
               </div>
+
+
             </li>
+
 
             <li class="mt-3">
               <div class="fw-bold text-dark mb-1">
@@ -414,13 +508,20 @@
                   <i class="bi bi-globe me-1"></i> Live Demo
                 </a>
               </div>
-              <p class="text-secondary mb-2">Python Django web application for splitting expenses between friends. The app allows users to create groups, add expenses, and calculate the amount each person owes or is owed.</p>
+              
+              <p class="text-secondary mb-2">
+                Python Django web application for splitting expenses between friends. The app allows users to create groups, add expenses, and calculate the amount each person owes or is owed.
+              </p>
+
+              <!-- Key Features / Highlights -->
               <ul class="ps-3 text-secondary small">
                 <li><strong>Host Server:</strong> It is hosted in local home pc (ubuntu server) using Tailscale funnel service.</li>
                 <li><strong>Database:</strong> SQLite database is used to store user data and expenses.</li>
                 <li><strong>Authentication:</strong> User authentication is implemented using Django's built-in authentication system.</li>
                 <li><strong>Save as App:</strong> The web application can be saved as a mobile app in both Android and iOS devices as Progressive Web Apps (PWAs), allowing users to install it on their devices by "Add to Home Screen" option.</li>
               </ul>
+
+              <!-- Tech Stack Badges -->
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <span class="badge text-secondary border bg-light">Python</span>
                 <span class="badge text-secondary border bg-light">Django</span>
@@ -429,8 +530,12 @@
                 <span class="badge text-secondary border bg-light">SQLite</span>
                 <span class="badge text-secondary border bg-light">Progressive Web App (PWA)</span>
               </div>
+
+
             </li>
+
           </ul>
+
         </div>
       </article>
 
@@ -440,69 +545,327 @@
     <section class="mt-4">
       <h2 class="h5 border-bottom pb-2 text-primary">Skills</h2>
       <div class="row justify-content-center g-3">
-        <div class="col-12 col-md-4">
+        
+        <div class="col-4">
           <div class="card">
             <div class="card-body">
               <h3 class="h6"><strong>Languages</strong></h3>
+              
               <skills-template name="Greek" rating="5"></skills-template>
+
               <skills-template name="English" rating="4"></skills-template>
+
               <skills-template name="German" rating="2"></skills-template>
+              
             </div>
           </div>
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-4">
           <div class="card">
             <div class="card-body">
               <h3 class="h6"><strong>Programming Languages</strong></h3>
+
               <skills-template name="Python" rating="5"></skills-template>
+
               <skills-template name="C/C++" rating="5"></skills-template>
+
               <skills-template name="C#" rating="5"></skills-template>
+
               <skills-template name="HTML/CSS/JS" rating="4"></skills-template>
+
               <skills-template name="Fortran" rating="4"></skills-template>
+
               <skills-template name="Java" rating="3"></skills-template>
+
             </div>
           </div>
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-4">
           <div class="card">
             <div class="card-body">
-              <h3 class="h6"><strong>Frameworks &amp; More</strong></h3>
+              <h3 class="h6"><strong>Frameworks & More</strong></h3>
+
               <skills-template name="Django" rating="5"></skills-template>
+
               <skills-template name="MAUI" rating="5"></skills-template>
+
               <skills-template name="Flutter" rating="5"></skills-template>
-              <skills-template name="SQL &amp; NoSQL" rating="4"></skills-template>
+
+              <skills-template name="SQL & NoSQL" rating="4"></skills-template>
+
               <skills-template name="Google Cloud" rating="4"></skills-template>
+
               <skills-template name="VBA" rating="4"></skills-template>
+
               <skills-template name="SKLearn" rating="4"></skills-template>
+
               <skills-template name="TensorFlow/Keras/Pytorch" rating="3"></skills-template>
+              
             </div>
           </div>
         </div>
+
       </div>
+
+    </section>
+
+    <!-- Skills 2nd row -->
+    <section class="mt-4">
+
+      <div class="row justify-content-start g-3">
+
+        <div class="col-4">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="h6"><strong>Programming Software</strong></h3>
+
+              <skills-template name="Visual Studio" rating="5"></skills-template>
+
+              <skills-template name="VS Code" rating="5"></skills-template>
+
+              <skills-template name="Jupyter Notebook" rating="5"></skills-template>
+
+              <skills-template name="Git(Hub)" rating="5"></skills-template>
+
+              <skills-template name="Linux" rating="4"></skills-template>
+
+              <skills-template name="Docker" rating="4"></skills-template>
+
+              <skills-template name="DBeaver" rating="4"></skills-template>
+                          
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-4">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="h6 justify-content-end"><strong> Mechanical Software</strong></h3>
+
+              <skills-template name="SolidWorks & PDM" rating="5"></skills-template>
+
+              <skills-template name="Inventor" rating="5"></skills-template>
+
+              <skills-template name="Altair HyperWorks" rating="5"></skills-template>
+
+              <skills-template name="Matlab/Simulink" rating="4"></skills-template>
+
+              <skills-template name="Webots" rating="4"></skills-template>
+
+              <skills-template name="ROS" rating="3"></skills-template>
+
+              <skills-template name="Gazebo" rating="3"></skills-template>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </section>
 
     <!-- Education -->
     <section class="mt-4">
-      <h2 class="h5 border-bottom pb-2 text-primary">Education</h2>
+      <h2 class="h5 border-bottom pb-2 text-primary">Higher Education</h2>
+      
       <article class="card mb-3">
         <div class="card-body">
-          <div class="d-flex flex-column flex-md-row justify-content-between gap-1 mb-1">
-            <div class="fw-bold fs-6">Diploma in Mechanical Engineering</div>
-            <div class="text-secondary fw-semibold">2012 - 2018</div>
+          <div class="d-flex flex-column flex-md-row justify-content-between gap-1 mb-2">
+            <div class="fw-bold">Undergraduate, Informatics &amp; Telecommunication, National and Kapodistrian University of Athens</div>
+            <div class="text-secondary fw-semibold">Jan 2025 - now</div>
           </div>
-          <p class="text-secondary mb-0">National Technical University of Athens (NTUA)</p>
-          <p class="text-muted small mb-0">Specialization: Dynamic & Structural Analysis, Automotive Engineering</p>
+          <ul class="mb-2">
+            <li><strong>Specialization:</strong> Computer Engineering </li>
+          </ul>
         </div>
       </article>
+
+      <article class="card mb-3">
+        <div class="card-body">
+          <div class="d-flex flex-column flex-md-row justify-content-between gap-1 mb-2">
+            <div class="fw-bold">Integrated Bachelor &amp; Master, Mechanical Engineering, National Technical University of Athens.</div>
+            <div class="text-secondary fw-semibold">Sep 2012 - Sep 2018</div>
+          </div>
+          <ul class="mb-2">
+            <li><strong>Specialization:</strong> Ground & Aerial Vehicles </li>
+            <li>
+              <div><strong>Grade:</strong> 7.4/10.</div>
+            </li>
+            <li>
+              <div><strong>Thesis:</strong> <em>Car Accident Reconstruction using energy methods.</em></div>
+            </li>
+            <li>
+              <div><strong>Published Paper:</strong> <em>Anagnostopoulos, K., et al. "Car accident reconstruction using energy methods." International Journal of Crashworthiness 25.1 (2020): 1-12.</em></div>
+            </li>
+          </ul>
+        </div>
+      </article>
+
     </section>
 
-    <!-- Footer -->
-    <footer class="mt-4 pt-3 border-top text-center text-muted small">
-      <p class="mb-0">© Konstantinos Anagnostopoulos — CV</p>
-    </footer>
+    <!-- Certifications -->
+    <section class="mt-4">
+      <h2 class="h5 border-bottom pb-2 text-primary">Certifications</h2>
 
+        <div class="row justify-content-start g-3">
+
+          <div class="col-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <sertifications-template name="HyperMesh 2017 Intermediate Examination" issuer="Altair University" date="April 2019" openFile="certifications/HyperMesh 2017 Intermediate Examination_Certificate of Achievement.pdf"></sertifications-template>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <sertifications-template name="Summer School on Industrial Product Design and Concept Development" issuer="University of Aegean" date="July 2019" openFile="certifications/Anagnostopoulos_Konstantinos__8272_SHEET1.pdf"></sertifications-template>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <sertifications-template name="IBM Data Science" issuer="IBM/Coursera" date="August 2020" openFile="certifications/Coursera.pdf"></sertifications-template>
+                  </div>
+              </div>
+          </div>        
+          
+          <div class="col-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <sertifications-template name="Machine Learning & Self-Driving Cars: Bootcamp with Python" issuer="Udemy" date="November 2022" openFile="certifications/self_driving.pdf"></sertifications-template>
+                  </div>
+              </div>
+          </div>  
+
+          <div class="col-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <sertifications-template name="Introduction to Artificial Intelligence and to Prediction & Estimation Algorithms" issuer="NKUA" date="June 2023" openFile="certifications/ekpa_ml_cert.pdf"></sertifications-template>
+                  </div>
+              </div>
+          </div>  
+
+          <div class="col-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <sertifications-template name="Getting Started with Accelerated Computing in Modern CUDA C++" issuer="NVIDIA" date="February 2026" openFile="certifications/My Learning _ NVIDIA.pdf"></sertifications-template>
+                  </div>
+              </div>
+          </div>  
+
+      </div>
+
+    </section>
+
+
+    <!-- References -->
+    <section class="mt-4">
+      <h2 class="h5 border-bottom pb-2 text-primary">References</h2>
+      <div class="row">
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">Dr. Elias Nassiopoulos</h3>
+              <div class="d-flex align-items-center gap-1">
+                  <i class="bi bi-linkedin"></i>
+                  <a href="https://www.linkedin.com/in/dr-elias-nassiopoulos-phd-ceng-10411716/" target="_blank" rel="noopener noreferrer">linkedin.com/in/elias-nassiopoulos</a>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                  <i class="bi bi-envelope-fill"></i>
+                  <a href="mailto:i.nassiopoulos@gmail.com" target="_blank" rel="noopener noreferrer">i.nassiopoulos@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">Dr. Dimitrios Koulocheris</h3>
+              <div class="d-flex align-items-center gap-1">
+                    <i class="bi bi-globe"></i>
+                    <a href="https://mkae.mech.ntua.gr/en/koulocheris" target="_blank" rel="noopener noreferrer">personal page</a>
+                </div>
+                <div class="d-flex align-items-center gap-1">
+                    <i class="bi bi-envelope-fill"></i>
+                    <a href="mailto:dbkoulva@mail.ntua.gr" target="_blank" rel="noopener noreferrer">dbkoulva@mail.ntua.gr</a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+    <!-- More -->
+    <section class="mt-4">
+      <h2 class="h5 border-bottom pb-2 text-primary">Other Information</h2>
+      
+      <!-- Memberships -->
+      <div class="row mb-2">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">Memberships</h3>
+              <div class="d-flex align-items-center gap-1">
+                  <i class="bi bi-tools"></i>
+                  <a href="https://web.tee.gr/" target="_blank" rel="noopener noreferrer">Member of the Technical Chamber of Greece (TEE – TCG)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Personal Page -->
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">Personal Page</h3>
+              <div class="d-flex align-items-center gap-1">
+                  <i class="bi bi-globe"></i>
+                  <a href="https://ntinostempo0.github.io/Resume/" target="_blank" rel="noopener noreferrer">https://ntinostempo0.github.io/Resume/</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </section>
+
+    <footer class="mt-4 pt-3 border-top small text-secondary d-flex flex-wrap justify-content-between gap-2">
+    <!-- calculate date automaticaly -->
+      <span id="current-date"></span>
+      
+      <span>Konstantinos Anagnostopoulos - CV</span>
+      <span><a href="https://ntinostempo0.github.io/Resume/K_Anagnostopoulos_CV.html" target="_blank" rel="noopener noreferrer">View CV Online</a></span>
+    </footer>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+<script>
+  
+  const span = document.getElementById("current-date");
+
+  const today = new Date();
+
+  const options = {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  };
+
+  span.textContent = "Last updated: " + today.toLocaleDateString("en-GB", options);
+
+</script>
