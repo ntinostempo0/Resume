@@ -98,15 +98,19 @@ a {
 }
 
 .information-content {
-  align-items: flex-start;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
-  box-sizing: border-box;
-  text-align: left;
-  max-width: 600px;
-  padding: 24px 28px 14px;
+    align-items: flex-start;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+    box-sizing: border-box;
+    text-align: left;
+    max-width: 600px;
+    padding: 24px 28px 14px;
+
+    /* Added for mobile responsiveness & scrolling */
+    max-height: 70vh;        /* Limits height so it fits well inside the viewport */
+    overflow-y: auto;        /* Allows scrolling if text is longer than max-height */
 }
 
 .information-content p {
@@ -115,8 +119,11 @@ a {
 }
 
 .music-page {
-  flex-direction: column;
-  gap: 12px;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;         /* Prevents headers and content from touching the screen edges */
 }
 
 .photos-page {
@@ -244,11 +251,14 @@ a {
 
 /* Styles for Audio */
 .player {
-  background: #333;
-  padding: 20px;
-  border-radius: 12px;
-  width: 400px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background: #333;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;             /* Takes full width up to the max-width */
+    max-width: 400px;        /* Keeps original desktop size */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-sizing: border-box;  /* Ensures padding doesn't cause overflow */
+    margin: 0 auto;          /* Centers player within its parent */
 }
 
 .controls {
