@@ -43,12 +43,16 @@ a {
 }
 
 .page {
-  height: 100vh;
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px;
+    min-height: 100vh;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;               /* Changed: Removed fixed margin: 50px which pushed elements off-screen on mobile */
+    padding: 20px;           /* Replaced margin with padding for safe spacing on all sides */
+    box-sizing: border-box;
+    width: 100%;
 }
 
 
@@ -91,26 +95,38 @@ a {
 }
 
 .information-page {
-  justify-content: flex-start;
-  align-items: flex-end;
-  box-sizing: border-box;
-  padding: 0 7vw 8vh;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 .information-content {
     align-items: flex-start;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 12px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
     box-sizing: border-box;
     text-align: left;
+    width: 100%;
     max-width: 600px;
-    padding: 24px 28px 14px;
+    padding: 20px 24px 10px;
 
-    /* Added for mobile responsiveness & scrolling */
-    max-height: 70vh;        /* Limits height so it fits well inside the viewport */
-    overflow-y: auto;        /* Allows scrolling if text is longer than max-height */
+    /* Allows content to fit and scroll within screen limits on any mobile device */
+    max-height: 80vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.information-content h2 {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 8px 0;
+    margin-top: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 .information-content p {
@@ -120,10 +136,13 @@ a {
 
 .music-page {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 12px;
     width: 100%;
+    padding: 20px;
     box-sizing: border-box;
-    padding: 0 20px;         /* Prevents headers and content from touching the screen edges */
+    overflow-y: auto;       /* Prevents music widgets from being cut off vertically on small mobile screens */
 }
 
 .photos-page {
@@ -252,13 +271,13 @@ a {
 /* Styles for Audio */
 .player {
     background: #333;
-    padding: 20px;
+    padding: 16px 20px;
     border-radius: 12px;
-    width: 100%;             /* Takes full width up to the max-width */
-    max-width: 400px;        /* Keeps original desktop size */
+    width: 100%;             /* Fills parent width with margins accounted for */
+    max-width: 360px;        /* Fits mobile screens neatly without overflowing right */
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    box-sizing: border-box;  /* Ensures padding doesn't cause overflow */
-    margin: 0 auto;          /* Centers player within its parent */
+    box-sizing: border-box;  /* Includes padding inside width calculation */
+    margin: 0 auto;
 }
 
 .controls {
