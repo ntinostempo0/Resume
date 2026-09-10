@@ -69,7 +69,7 @@ a {
 
 
 .page-with-bg {
-    background-image: url('media/DSC_0005.JPG');
+    background-image: url('media/images/Blue_and_me.JPG');
     background-position: center;
     background-attachment: fixed; 
     background-size: cover;
@@ -164,7 +164,7 @@ a {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
-  width: min(90vw, 1000px);
+  width: min(60vw, 1000px);
 }
 
 .photo-thumbnail {

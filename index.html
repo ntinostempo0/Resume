@@ -149,7 +149,7 @@
     const photoViewer = document.getElementById("photoViewer");
     const viewerImage = document.getElementById("viewerImage");
     const viewerCaption = document.getElementById("viewerCaption");
-    const imageCount = 4;
+    const imageCount = 8;
     let selectedPhoto = 0;
 
     for (let imageNumber = 1; imageNumber <= imageCount; imageNumber += 1) {
@@ -198,7 +198,9 @@
         if (event.key === "ArrowRight") document.getElementById("nextPhoto").click();
     });
 
-    document.querySelectorAll(".player").forEach((player) => {
+    const players = Array.from(document.querySelectorAll(".player"));
+
+    players.forEach((player) => {
         const audio = player.querySelector("audio");
         const playBtn = player.querySelector(".play-btn");
         const progressBar = player.querySelector(".progress-bar");
@@ -206,12 +208,30 @@
 
         playBtn.addEventListener("click", () => {
             if (audio.paused) {
-                audio.play();
-                playBtn.textContent = "⏸";
+                audio.play().catch(() => {
+                    playBtn.textContent = "▶";
+                });
             } else {
                 audio.pause();
-                playBtn.textContent = "▶";
             }
+        });
+
+        audio.addEventListener("play", () => {
+            players.forEach((otherPlayer) => {
+                const otherAudio = otherPlayer.querySelector("audio");
+                const otherPlayBtn = otherPlayer.querySelector(".play-btn");
+
+                if (otherAudio !== audio) {
+                    otherAudio.pause();
+                    otherPlayBtn.textContent = "▶";
+                }
+            });
+
+            playBtn.textContent = "⏸";
+        });
+
+        audio.addEventListener("pause", () => {
+            playBtn.textContent = "▶";
         });
 
         audio.addEventListener("timeupdate", () => {
