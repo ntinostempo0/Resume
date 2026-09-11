@@ -23,6 +23,74 @@ a {
     text-decoration: none;
 }
 
+.project-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.35rem;
+  list-style: none;
+  margin: 0 0 0.1rem;
+  padding-left: 0 !important;
+}
+
+.project-details > li {
+  display: inline-block;
+  position: relative;
+}
+
+.project-details > li:not(:last-child)::after {
+  content: ",";
+}
+
+.project-details strong {
+  cursor: help;
+  font-weight: 700;
+}
+
+.project-details > li > span {
+  background: #343a40;
+  border-radius: 4px;
+  bottom: calc(100% + 0.5rem);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  left: 50%;
+  line-height: 1.4;
+  padding: 0.5rem 0.65rem;
+  position: absolute;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: min(32rem, 75vw);
+  z-index: 10;
+}
+
+.project-details > li > span::after {
+  border-left: 0.35rem solid transparent;
+  border-right: 0.35rem solid transparent;
+  border-top: 0.35rem solid #343a40;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+.project-details > li:hover > span,
+.project-details > li:focus-within > span {
+  display: block;
+}
+
+@media print {
+  .project-details > li > span {
+    display: none;
+  }
+
+  .project-details > li > span::after {
+    display: none;
+  }
+}
+
 
 
 
