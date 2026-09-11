@@ -8,6 +8,61 @@ html {
     width: 100%;
     overflow-x: hidden;
 }
+.a4-page {
+  line-height: 1.2;
+}
+
+.a4-page section.mt-4 {
+  margin-top: 0.75rem !important;
+}
+
+.a4-page section.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.a4-page h2 {
+  margin-bottom: 0.45rem;
+}
+
+.a4-page p {
+  line-height: 1.25;
+}
+
+.a4-page .card {
+  margin-bottom: 0.5rem !important;
+}
+
+.a4-page .card-body {
+  padding: 0.65rem 0.8rem;
+}
+
+.a4-page .card-body > .mb-3,
+.a4-page .card-body > .mb-2 {
+  margin-bottom: 0.45rem !important;
+}
+
+.a4-page article > .card-body > ul.mb-2 {
+  margin-bottom: 0.35rem !important;
+}
+
+.a4-page article > .card-body > ul > li.mt-3,
+.a4-page article > .card-body > ul > li.mt-4 {
+  margin-top: 0.65rem !important;
+}
+
+.a4-page article > .card-body > ul > li > p.mb-2 {
+  margin-bottom: 0.35rem !important;
+}
+
+.a4-page .project-details {
+  margin-bottom: 0.35rem !important;
+}
+
+.a4-page .table > :not(caption) > * > * {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
 
 html, body {
     margin: 0;
